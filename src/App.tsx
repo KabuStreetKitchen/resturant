@@ -7,7 +7,7 @@ import ErrorBoundary from "@/components/ErrorBoundary";
 import { LanguageProvider, useTranslation } from "@/i18n/LanguageContext";
 import Index from "@/pages/Index";
 import NotFound from "@/pages/NotFound";
-
+// This is the main entry point of the application. It sets up the React Query client, routing, and error handling.
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
