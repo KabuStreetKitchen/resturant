@@ -1,18 +1,16 @@
-import { useQuery } from "@tanstack/react-query";
+import { useEffect } from "react";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import {
   fallbackContactInfo,
   fallbackDrinkCategories,
   fallbackMenuCategories,
   fallbackOpeningHours,
-  hasStaleContact,
-  hasStaleDrinks,
-  hasStaleMenu,
+  normalizeDrinkCategories,
+  normalizeMenuCategories,
   type ContactInfo,
   type DrinkCategory,
-  type DrinkItem,
   type MenuCategory,
-  type MenuItem,
   type OpeningHour,
 } from "@/data/restaurantData";
 
@@ -24,12 +22,64 @@ export const restaurantKeys = {
   hours: ["opening-hours"] as const,
 };
 
-// Contract for all hooks below: the bundled fallback content shows instantly,
-// and live Supabase rows replace it only once they load and pass the legacy
-// check. With no database (env vars missing) the site keeps the fallbacks.
+const liveQueryOptions = {
+  staleTime: 30 * 1000,
+  refetchInterval: 60 * 1000,
+  refetchOnWindowFocus: true,
+  refetchOnReconnect: true,
+  retry: 2,
+} as const;
+
+export interface RestaurantQueryState<T> {
+  data: T;
+  errorMessage: string | null;
+  isFallback: boolean;
+  isFetching: boolean;
+}
+
+interface RestaurantQueryObserver<T> {
+  data: T | undefined;
+  error: Error | null;
+  isPlaceholderData: boolean;
+  isFetching: boolean;
+}
+
+const missingConfigurationMessage =
+  "Supabase is not configured. Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.";
+
+const requireRows = <T>(rows: T[] | null, resource: string): T[] => {
+  if (!rows?.length) {
+    throw new Error(`Supabase returned no rows for ${resource}.`);
+  }
+
+  return rows;
+};
+
+function useRestaurantQueryState<T>(
+  query: RestaurantQueryObserver<T>,
+  fallback: T,
+  resource: string,
+): RestaurantQueryState<T> {
+  useEffect(() => {
+    if (query.error) {
+      console.error(`[restaurant-data:${resource}]`, query.error);
+    }
+  }, [query.error, resource]);
+
+  const errorMessage = !supabase
+    ? missingConfigurationMessage
+    : query.error?.message ?? null;
+
+  return {
+    data: query.data ?? fallback,
+    errorMessage,
+    isFallback: !supabase || !query.data || query.isPlaceholderData,
+    isFetching: query.isFetching,
+  };
+}
 
 const fetchMenuCategories = async (): Promise<MenuCategory[]> => {
-  if (!supabase) return fallbackMenuCategories;
+  if (!supabase) throw new Error(missingConfigurationMessage);
 
   const { data, error } = await supabase
     .from("menu_categories")
@@ -37,31 +87,25 @@ const fetchMenuCategories = async (): Promise<MenuCategory[]> => {
     .order("display_order");
 
   if (error) throw error;
-  if (!data?.length) return fallbackMenuCategories;
-
-  const sorted = data.map((category) => ({
-    ...category,
-    menu_items: [...category.menu_items].sort(
-      (a: MenuItem, b: MenuItem) => a.display_order - b.display_order,
-    ),
-  })) as MenuCategory[];
-
-  return hasStaleMenu(sorted) ? fallbackMenuCategories : sorted;
+  return normalizeMenuCategories(
+    requireRows(data as MenuCategory[] | null, "menu categories"),
+  );
 };
 
-export function useMenuCategories(): MenuCategory[] {
-  const { data } = useQuery({
+export function useMenuCategories(): RestaurantQueryState<MenuCategory[]> {
+  const query = useQuery({
     queryKey: restaurantKeys.menu,
     queryFn: fetchMenuCategories,
     placeholderData: fallbackMenuCategories,
     enabled: !!supabase,
+    ...liveQueryOptions,
   });
 
-  return data ?? fallbackMenuCategories;
+  return useRestaurantQueryState(query, fallbackMenuCategories, "menu");
 }
 
 const fetchDrinkCategories = async (): Promise<DrinkCategory[]> => {
-  if (!supabase) return fallbackDrinkCategories;
+  if (!supabase) throw new Error(missingConfigurationMessage);
 
   const { data, error } = await supabase
     .from("drink_categories")
@@ -69,31 +113,25 @@ const fetchDrinkCategories = async (): Promise<DrinkCategory[]> => {
     .order("display_order");
 
   if (error) throw error;
-  if (!data?.length) return fallbackDrinkCategories;
-
-  const sorted = data.map((category) => ({
-    ...category,
-    drink_items: [...category.drink_items].sort(
-      (a: DrinkItem, b: DrinkItem) => a.display_order - b.display_order,
-    ),
-  })) as DrinkCategory[];
-
-  return hasStaleDrinks(sorted) ? fallbackDrinkCategories : sorted;
+  return normalizeDrinkCategories(
+    requireRows(data as DrinkCategory[] | null, "drink categories"),
+  );
 };
 
-export function useDrinkCategories(): DrinkCategory[] {
-  const { data } = useQuery({
+export function useDrinkCategories(): RestaurantQueryState<DrinkCategory[]> {
+  const query = useQuery({
     queryKey: restaurantKeys.drinks,
     queryFn: fetchDrinkCategories,
     placeholderData: fallbackDrinkCategories,
     enabled: !!supabase,
+    ...liveQueryOptions,
   });
 
-  return data ?? fallbackDrinkCategories;
+  return useRestaurantQueryState(query, fallbackDrinkCategories, "drinks");
 }
 
 const fetchContactInfo = async (): Promise<ContactInfo[]> => {
-  if (!supabase) return fallbackContactInfo;
+  if (!supabase) throw new Error(missingConfigurationMessage);
 
   const { data, error } = await supabase
     .from("contact_info")
@@ -101,24 +139,23 @@ const fetchContactInfo = async (): Promise<ContactInfo[]> => {
     .order("display_order");
 
   if (error) throw error;
-  if (!data?.length) return fallbackContactInfo;
-
-  return hasStaleContact(data) ? fallbackContactInfo : (data as ContactInfo[]);
+  return requireRows(data as ContactInfo[] | null, "contact information");
 };
 
-export function useContactInfo(): ContactInfo[] {
-  const { data } = useQuery({
+export function useContactInfo(): RestaurantQueryState<ContactInfo[]> {
+  const query = useQuery({
     queryKey: restaurantKeys.contact,
     queryFn: fetchContactInfo,
     placeholderData: fallbackContactInfo,
     enabled: !!supabase,
+    ...liveQueryOptions,
   });
 
-  return data ?? fallbackContactInfo;
+  return useRestaurantQueryState(query, fallbackContactInfo, "contact");
 }
 
 const fetchOpeningHours = async (): Promise<OpeningHour[]> => {
-  if (!supabase) return fallbackOpeningHours;
+  if (!supabase) throw new Error(missingConfigurationMessage);
 
   const { data, error } = await supabase
     .from("opening_hours")
@@ -126,18 +163,71 @@ const fetchOpeningHours = async (): Promise<OpeningHour[]> => {
     .order("day_of_week");
 
   if (error) throw error;
-  if (!data?.length) return fallbackOpeningHours;
-
-  return data as OpeningHour[];
+  return requireRows(data as OpeningHour[] | null, "opening hours");
 };
 
-export function useOpeningHours(): OpeningHour[] {
-  const { data } = useQuery({
+export function useOpeningHours(): RestaurantQueryState<OpeningHour[]> {
+  const query = useQuery({
     queryKey: restaurantKeys.hours,
     queryFn: fetchOpeningHours,
     placeholderData: fallbackOpeningHours,
     enabled: !!supabase,
+    ...liveQueryOptions,
   });
 
-  return data ?? fallbackOpeningHours;
+  return useRestaurantQueryState(query, fallbackOpeningHours, "opening-hours");
+}
+
+export function useRestaurantRealtimeSync(): void {
+  const queryClient = useQueryClient();
+
+  useEffect(() => {
+    if (!supabase) return undefined;
+
+    const invalidate = (queryKey: readonly string[]) => {
+      void queryClient.invalidateQueries({ queryKey });
+    };
+
+    const channel = supabase
+      .channel("restaurant-public-content")
+      .on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: "menu_categories" },
+        () => invalidate(restaurantKeys.menu),
+      )
+      .on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: "menu_items" },
+        () => invalidate(restaurantKeys.menu),
+      )
+      .on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: "drink_categories" },
+        () => invalidate(restaurantKeys.drinks),
+      )
+      .on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: "drink_items" },
+        () => invalidate(restaurantKeys.drinks),
+      )
+      .on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: "contact_info" },
+        () => invalidate(restaurantKeys.contact),
+      )
+      .on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: "opening_hours" },
+        () => invalidate(restaurantKeys.hours),
+      )
+      .subscribe((status) => {
+        if (status === "CHANNEL_ERROR" || status === "TIMED_OUT") {
+          console.error(`[restaurant-data:realtime] ${status}`);
+        }
+      });
+
+    return () => {
+      void supabase.removeChannel(channel);
+    };
+  }, [queryClient]);
 }

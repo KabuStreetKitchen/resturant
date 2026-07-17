@@ -4,6 +4,7 @@ import kabulLogo from "@/assets/kabul-logo.jpg";
 import { dayOrder } from "@/data/restaurantData";
 import { useOpeningHours } from "@/hooks/useRestaurantData";
 import { useTranslation } from "@/i18n/LanguageContext";
+import DataSourceNotice from "@/components/DataSourceNotice";
 
 // 2023-01-01 was a Sunday → index 0..6 maps cleanly to Sun..Sat.
 const weekdayIndex: Record<string, number> = {
@@ -17,7 +18,7 @@ const weekdayIndex: Record<string, number> = {
 };
 
 const WelcomeSection = () => {
-  const openingHours = useOpeningHours();
+  const { data: openingHours, errorMessage } = useOpeningHours();
   const { t, meta } = useTranslation();
 
   const dayFormatter = new Intl.DateTimeFormat(meta.intlLocale, { weekday: "short" });
@@ -32,8 +33,11 @@ const WelcomeSection = () => {
     .map((hour) => ({
       key: hour.day_of_week,
       day: localizedDay(hour.day_of_week),
-      time: hour.is_closed ? t.hours.closed : `${hour.open_time.slice(0, 5)} – ${hour.close_time.slice(0, 5)}`,
-      isClosed: hour.is_closed,
+      time:
+        hour.is_closed || !hour.open_time || !hour.close_time
+          ? t.hours.closed
+          : `${hour.open_time.slice(0, 5)} – ${hour.close_time.slice(0, 5)}`,
+      isClosed: Boolean(hour.is_closed || !hour.open_time || !hour.close_time),
     }));
 
   const scrollToSection = (href: string) => {
@@ -65,6 +69,7 @@ const WelcomeSection = () => {
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col px-4 pt-28 sm:px-6 lg:px-8">
+        <DataSourceNotice errorMessage={errorMessage} resource="opening-hours" className="mb-4" />
         <div className="grid flex-1 items-center gap-10 pb-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(420px,0.7fr)]">
           <div className="hero-copy-contrast relative max-w-3xl text-white">
             <div className="mb-6 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.32em] text-comorin-teal-light">

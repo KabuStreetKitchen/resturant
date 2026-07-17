@@ -79,6 +79,19 @@
   html {
     scroll-behavior: smooth;
     background: hsl(var(--background));
+    /*
+     * Fluid root font-size: scales with viewport width so type grows on larger
+     * screens. Tailwind sizes fonts in rem, so every text token inherits this.
+     * ~15px floor on small screens, linearly up to ~20px on wide displays.
+     */
+    font-size: clamp(15px, 0.85rem + 0.42vw, 20px);
+  }
+
+  /* Nudge the ceiling higher on very large / high-res desktop screens. */
+  @media (min-width: 1920px) {
+    html {
+      font-size: clamp(20px, 0.6rem + 0.62vw, 24px);
+    }
   }
 
   ::selection {

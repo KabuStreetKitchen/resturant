@@ -3,15 +3,17 @@ import chaiDooghAyranImage from "@/assets/chai-doogh-ayran.jpg";
 import kabulLogo from "@/assets/kabul-logo.jpg";
 import { useDrinkCategories } from "@/hooks/useRestaurantData";
 import { useTranslation } from "@/i18n/LanguageContext";
+import DataSourceNotice from "@/components/DataSourceNotice";
 
 const DrinkSection = () => {
-  const drinkCategories = useDrinkCategories();
+  const { data: drinkCategories, errorMessage } = useDrinkCategories();
   const { t } = useTranslation();
 
   return (
     <section id="drink" className="section-band section-band-drink relative isolate overflow-hidden">
       <div className="absolute inset-0 depth-pattern opacity-40" />
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <DataSourceNotice errorMessage={errorMessage} resource="drinks" className="mb-8" />
         <div className="grid gap-10 lg:grid-cols-[1fr_0.82fr] lg:items-center">
           <div className="order-2 depth-stage lg:order-1">
             <div className="feature-plate relative min-h-[560px] overflow-hidden rounded-xl border border-white/12 shadow-[0_40px_120px_hsl(var(--comorin-teal-dark)/0.5)]">
@@ -72,7 +74,7 @@ const DrinkSection = () => {
             <article key={category.id} className="menu-category-card group">
               <div className="relative h-48 overflow-hidden rounded-t-lg">
                 <img
-                  src={category.image_url}
+                  src={category.image_url ?? "/placeholder.svg"}
                   alt={category.name}
                   loading="lazy"
                   decoding="async"

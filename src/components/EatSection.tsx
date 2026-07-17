@@ -5,9 +5,10 @@ import kabulLogo from "@/assets/kabul-logo.jpg";
 import { fallbackKabulPlatte } from "@/data/restaurantData";
 import { useMenuCategories } from "@/hooks/useRestaurantData";
 import { useTranslation } from "@/i18n/LanguageContext";
+import DataSourceNotice from "@/components/DataSourceNotice";
 
 const EatSection = () => {
-  const menuCategories = useMenuCategories();
+  const { data: menuCategories, errorMessage } = useMenuCategories();
   const platte = fallbackKabulPlatte;
   const { t } = useTranslation();
 
@@ -28,6 +29,7 @@ const EatSection = () => {
     <section id="eat" className="section-band section-band-eat relative isolate overflow-hidden">
       <div className="absolute inset-0 depth-pattern opacity-50" />
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <DataSourceNotice errorMessage={errorMessage} resource="menu" className="mb-8" />
         <div className="grid items-end gap-10 lg:grid-cols-[0.85fr_1fr]">
           <div>
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-bold uppercase tracking-[0.28em] text-comorin-teal-light backdrop-blur-md">
@@ -81,7 +83,7 @@ const EatSection = () => {
             <article key={category.id} className="menu-category-card group">
               <div className="relative h-48 overflow-hidden rounded-t-lg">
                 <img
-                  src={category.image_url}
+                  src={category.image_url ?? "/placeholder.svg"}
                   alt={category.name}
                   loading="lazy"
                   decoding="async"

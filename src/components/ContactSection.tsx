@@ -2,9 +2,10 @@ import { Clock, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import grillAmbient from "@/assets/grill.jpg";
 import { useContactInfo } from "@/hooks/useRestaurantData";
 import { useTranslation } from "@/i18n/LanguageContext";
+import DataSourceNotice from "@/components/DataSourceNotice";
 
 const ContactSection = () => {
-  const contactInfo = useContactInfo();
+  const { data: contactInfo, errorMessage } = useContactInfo();
   const { t } = useTranslation();
 
   const getContactByType = (type: string) => contactInfo.filter((info) => info.type === type);
@@ -28,6 +29,7 @@ const ContactSection = () => {
     <section id="contact" className="section-band section-band-contact relative isolate overflow-hidden">
       <div className="absolute inset-0 depth-pattern opacity-30" />
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <DataSourceNotice errorMessage={errorMessage} resource="contact" className="mb-8" />
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1fr] lg:items-center">
           <div className="text-white">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-bold uppercase tracking-[0.28em] text-comorin-teal-light backdrop-blur-md">

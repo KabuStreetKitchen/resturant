@@ -1,25 +1,25 @@
 export interface OpeningHour {
   id: string;
   day_of_week: string;
-  open_time: string;
-  close_time: string;
-  is_closed: boolean;
+  open_time: string | null;
+  close_time: string | null;
+  is_closed: boolean | null;
 }
 
 export interface MenuItem {
   id: string;
   name: string;
   price: number;
-  description?: string;
-  display_order: number;
+  description?: string | null;
+  display_order: number | null;
 }
 
 export interface MenuCategory {
   id: string;
   name: string;
-  image_url: string;
-  description?: string;
-  display_order: number;
+  image_url: string | null;
+  description?: string | null;
+  display_order: number | null;
   menu_items: MenuItem[];
 }
 
@@ -27,15 +27,15 @@ export interface DrinkItem {
   id: string;
   name: string;
   price: number;
-  description?: string;
-  display_order: number;
+  description?: string | null;
+  display_order: number | null;
 }
 
 export interface DrinkCategory {
   id: string;
   name: string;
-  image_url: string;
-  display_order: number;
+  image_url: string | null;
+  display_order: number | null;
   drink_items: DrinkItem[];
 }
 
@@ -44,7 +44,7 @@ export interface ContactInfo {
   type: string;
   label: string;
   value: string;
-  display_order: number;
+  display_order: number | null;
 }
 
 export interface KabulPlatteCourse {
@@ -65,49 +65,36 @@ export interface KabulPlatte {
   options: KabulPlatteOption[];
 }
 
-// Old brand / cuisine fragments that must never resurface from a stale database.
-// Covers both the former "Rouin Safi" / "Bella India" data and any teal-era copy.
-const staleBrandTerms = [
-  "indian",
-  "india",
-  "namaste",
-  "curry",
-  "butter chicken",
-  "vindaloo",
-  "palak",
-  "dal maharani",
-  "biryani",
-  "pakora",
-  "paneer",
-  "tandoori",
-  "gulab",
-  "kulfi",
-  "ras malai",
-  "lassi",
-  "masala chai",
-  "kingfisher",
-  "cobra",
-  "bella india",
-  "bella-india",
-  "bellaindia",
-  "rouin",
-  "safi",
-  "comorin",
-  "pasta",
-];
+const displayOrder = (value: number | null) => value ?? Number.MAX_SAFE_INTEGER;
 
-const hasStaleText = (value?: string | null) => {
-  if (!value) return false;
-  const normalized = value.toLowerCase();
+// Supabase is the content source of truth. Normalize ordering only; never
+// reject a complete live response because an item happens to contain a word
+// fragment (for example, "Classic" contains "lassi").
+export const normalizeMenuCategories = (categories: MenuCategory[]): MenuCategory[] =>
+  [...categories]
+    .sort((a, b) => displayOrder(a.display_order) - displayOrder(b.display_order))
+    .map((category) => ({
+      ...category,
+      menu_items: [...category.menu_items].sort(
+        (a, b) => displayOrder(a.display_order) - displayOrder(b.display_order),
+      ),
+    }));
 
-  return staleBrandTerms.some((term) => normalized.includes(term));
-};
+export const normalizeDrinkCategories = (categories: DrinkCategory[]): DrinkCategory[] =>
+  [...categories]
+    .sort((a, b) => displayOrder(a.display_order) - displayOrder(b.display_order))
+    .map((category) => ({
+      ...category,
+      drink_items: [...category.drink_items].sort(
+        (a, b) => displayOrder(a.display_order) - displayOrder(b.display_order),
+      ),
+    }));
 
 export const fallbackOpeningHours: OpeningHour[] = [
-  { day: "Monday",    open: "11:00:00", close: "23:00:00" },
-  { day: "Tuesday",   open: "11:00:00", close: "23:00:00" },
-  { day: "Wednesday", open: "11:00:00", close: "23:00:00" },
-  { day: "Thursday",  open: "11:00:00", close: "23:00:00" },
+  { day: "Monday",    open: "11:00:00", close: "22:00:00" },
+  { day: "Tuesday",   open: "11:00:00", close: "22:00:00" },
+  { day: "Wednesday", open: "11:00:00", close: "22:00:00" },
+  { day: "Thursday",  open: "11:00:00", close: "22:00:00" },
   { day: "Friday",    open: "11:00:00", close: "00:00:00" },
   { day: "Saturday",  open: "11:00:00", close: "00:00:00" },
   { day: "Sunday",    open: "11:00:00", close: "22:00:00" },
@@ -163,8 +150,8 @@ export const fallbackMenuCategories: MenuCategory[] = [
     menu_items: [
       { id: "kabuli-palaw-royal", name: "Kabuli Palaw Royal", price: 14.9, display_order: 1, description: "Traditioneller Kabuli Palaw mit zartem Lammfleisch." },
       { id: "mahicha-palaw", name: "Mahicha Palaw", price: 17.5, display_order: 2, description: "Traditioneller Kabuli Palaw mit Lammhaxe." },
-      { id: "karahi-lamm", name: "Karahi Lamm", price: 15.9, display_order: 3, description: "Zartes Lammfleisch in würziger Karahi-Pfanne." },
-      { id: "karahi-haehnchen", name: "Karahi Hähnchen", price: 13.9, display_order: 4, description: "Mariniertes Hähnchenfleisch in würziger Karahi-Pfanne." },
+      { id: "karahi-lamm", name: "Karahi Lamm", price: 23.9, display_order: 3, description: "Zartes Lammfleisch in würziger Karahi-Pfanne." },
+      { id: "karahi-haehnchen", name: "Karahi Hähnchen", price: 18.9, display_order: 4, description: "Mariniertes Hähnchenfleisch in würziger Karahi-Pfanne." },
     ],
   },
   {
@@ -307,24 +294,6 @@ export const fallbackContactInfo: ContactInfo[] = [
   { id: "imprint", type: "imprint", label: "Impressum", value: "Kabul Street Kitchen GmbH", display_order: 7 },
   { id: "delivery", type: "delivery_time", label: "Lieferzeit", value: "30–45 Minuten", display_order: 8 },
 ];
-
-export const hasStaleMenu = (categories: MenuCategory[]) =>
-  categories.some(
-    (category) =>
-      hasStaleText(category.name) ||
-      hasStaleText(category.description) ||
-      category.menu_items.some((item) => hasStaleText(item.name) || hasStaleText(item.description)),
-  );
-
-export const hasStaleDrinks = (categories: DrinkCategory[]) =>
-  categories.some(
-    (category) =>
-      hasStaleText(category.name) ||
-      category.drink_items.some((item) => hasStaleText(item.name)),
-  );
-
-export const hasStaleContact = (items: ContactInfo[]) =>
-  items.some((item) => hasStaleText(item.label) || hasStaleText(item.value));
 
 export const dayOrder = [
   "Monday",
