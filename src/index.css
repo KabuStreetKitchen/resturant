@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /*
- * Kabul Street Kitchen — single "fire-on-black" design system. All colors HSL.
+ * Kabul Street Kitchen - single "fire-on-black" design system. All colors HSL.
  * NOTE: the CSS variables and Tailwind tokens keep their historical `comorin-*`
  * names to avoid churning 100+ references; their VALUES are repurposed to the
  * charcoal/ember/amber brand palette. Treat `comorin-teal`   = ember orange,

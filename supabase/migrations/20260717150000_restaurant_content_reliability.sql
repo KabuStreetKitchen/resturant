@@ -62,15 +62,15 @@ ON CONFLICT (day_of_week) DO UPDATE SET
 
 INSERT INTO public.menu_categories (name, image_url, description, display_order)
 VALUES
-  ('Vorspeisen', '/assets/cat-vorspeisen.jpg', 'Knusprige Teigtaschen, frisches Fladenbrot und herzhafte Suppen – der Auftakt.', 1),
-  ('Grill Teller', '/assets/cat-grill.jpg', 'Vom Holzkohlegrill – alle Grillteller mit Pommes, Chalau oder Kabuli Palaw.', 2),
+  ('Vorspeisen', '/assets/cat-vorspeisen.jpg', 'Knusprige Teigtaschen, frisches Fladenbrot und herzhafte Suppen - der Auftakt.', 1),
+  ('Grill Teller', '/assets/cat-grill.jpg', 'Vom Holzkohlegrill - alle Grillteller mit Pommes, Chalau oder Kabuli Palaw.', 2),
   ('Reisgerichte & Karahi', '/assets/cat-reis.jpg', 'Traditioneller Kabuli Palaw und würzige Karahi-Pfannen.', 3),
-  ('Holzkohlegrill Spezial', '/assets/cat-barbecue.jpg', 'Frisch vom Holzkohlegrill – serviert mit Naan und Salat.', 4),
-  ('Döner', '/assets/cat-doener.jpg', 'Im Fladenbrot, als Teller oder in der Box – nach afghanischer Art.', 5),
-  ('Wraps & Spezials', '/assets/cat-wraps.jpg', 'Vom Grill in den Wrap – mit Salat und hausgemachter Sauce.', 6),
-  ('Street Pizza', '/assets/cat-pizza.jpg', '30 cm, frisch belegt – von Margherita bis Kabul Spezial Tikka.', 7),
+  ('Holzkohlegrill Spezial', '/assets/cat-barbecue.jpg', 'Frisch vom Holzkohlegrill - serviert mit Naan und Salat.', 4),
+  ('Döner', '/assets/cat-doener.jpg', 'Im Fladenbrot, als Teller oder in der Box - nach afghanischer Art.', 5),
+  ('Wraps & Spezials', '/assets/cat-wraps.jpg', 'Vom Grill in den Wrap - mit Salat und hausgemachter Sauce.', 6),
+  ('Street Pizza', '/assets/cat-pizza.jpg', '30 cm, frisch belegt - von Margherita bis Kabul Spezial Tikka.', 7),
   ('Beilagen & Kids', '/assets/cat-beilagen.jpg', 'Für die Kleinen und für den Hunger zwischendurch.', 8),
-  ('Saucen', '/assets/cat-saucen.jpg', 'Hausgemachte Chutneys und Saucen – je 1,00 €.', 9),
+  ('Saucen', '/assets/cat-saucen.jpg', 'Hausgemachte Chutneys und Saucen - je 1,00 €.', 9),
   ('Dessert', '/assets/cat-dessert.jpg', 'Süßer Abschluss mit Kardamom, Nüssen und Honig.', 10)
 ON CONFLICT (name) DO UPDATE SET
   image_url = EXCLUDED.image_url,
@@ -174,7 +174,7 @@ VALUES
   ('social', 'Facebook', 'Kabul Street Kitchen', 5),
   ('social', 'TikTok', 'tiktok.com/@kabulstreetkitchen', 6),
   ('imprint', 'Impressum', 'Kabul Street Kitchen GmbH', 7),
-  ('delivery_time', 'Lieferzeit', '30–45 Minuten', 8)
+  ('delivery_time', 'Lieferzeit', '30-45 Minuten', 8)
 ON CONFLICT (type, label) DO UPDATE SET
   value = EXCLUDED.value,
   display_order = EXCLUDED.display_order;

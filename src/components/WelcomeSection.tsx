@@ -25,7 +25,7 @@ const WelcomeSection = () => {
   };
 
   // Tuesday is the weekly Ruhetag. Enforced client-side until the live DB row
-  // can be updated — apply supabase/migrations/20261010153000_tuesday_closed.sql
+  // can be updated - apply supabase/migrations/20261010153000_tuesday_closed.sql
   // (or the UPDATE it contains), then delete this override.
   const hours = openingHours.map((hour) =>
     hour.day_of_week === "Tuesday"
@@ -41,7 +41,7 @@ const WelcomeSection = () => {
       time:
         hour.is_closed || !hour.open_time || !hour.close_time
           ? t.hours.closed
-          : `${hour.open_time.slice(0, 5)} – ${hour.close_time.slice(0, 5)}`,
+          : `${hour.open_time.slice(0, 5)} - ${hour.close_time.slice(0, 5)}`,
       isClosed: Boolean(hour.is_closed || !hour.open_time || !hour.close_time),
     }));
 

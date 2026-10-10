@@ -49,7 +49,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     try {
       window.localStorage.setItem(STORAGE_KEY, code);
     } catch {
-      // Ignore storage failures (private mode etc.) – language still applies for the session.
+      // Ignore storage failures (private mode etc.) - language still applies for the session.
     }
   }, []);
 

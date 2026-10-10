@@ -112,7 +112,7 @@ export const fallbackMenuCategories: MenuCategory[] = [
     name: "Vorspeisen",
     image_url: "/assets/cat-vorspeisen.jpg",
     display_order: 1,
-    description: "Knusprige Teigtaschen, frisches Fladenbrot und herzhafte Suppen – der Auftakt.",
+    description: "Knusprige Teigtaschen, frisches Fladenbrot und herzhafte Suppen - der Auftakt.",
     menu_items: [
       { id: "green-garden-salat", name: "Green Garden Salat", price: 5.5, display_order: 1, description: "Frischer gemischter Salat mit Gurken, Tomaten und hausgemachter Sauce." },
       { id: "sambosa", name: "Sambosa", price: 6.9, display_order: 2, description: "Knusprige Teigtaschen gefüllt mit Kartoffeln und Gewürzen. (4 Stück)" },
@@ -130,7 +130,7 @@ export const fallbackMenuCategories: MenuCategory[] = [
     name: "Grill Teller",
     image_url: "/assets/cat-grill.jpg",
     display_order: 2,
-    description: "Vom Holzkohlegrill – alle Grillteller mit Pommes, Chalau oder Kabuli Palaw.",
+    description: "Vom Holzkohlegrill - alle Grillteller mit Pommes, Chalau oder Kabuli Palaw.",
     menu_items: [
       { id: "shami-kingplatte", name: "Shami Kingplatte", price: 14.9, display_order: 1, description: "Würzige Hackfleischspieße vom Holzkohlegrill." },
       { id: "kottelet-masterplatte", name: "Kottelet Masterplatte", price: 24.9, display_order: 2, description: "Zarte Lammkoteletts vom Grill." },
@@ -159,7 +159,7 @@ export const fallbackMenuCategories: MenuCategory[] = [
     name: "Holzkohlegrill Spezial",
     image_url: "/assets/cat-barbecue.jpg",
     display_order: 4,
-    description: "Frisch vom Holzkohlegrill – serviert mit Naan und Salat.",
+    description: "Frisch vom Holzkohlegrill - serviert mit Naan und Salat.",
     menu_items: [
       { id: "shami-grill", name: "Shami Grill", price: 14.5, display_order: 1, description: "Afghanische Hackfleischspieße frisch vom Holzkohlegrill. (2 Spieße)" },
       { id: "tikka-grill", name: "Tikka Grill", price: 15.5, display_order: 2, description: "Afghanisches Lammfleisch vom Holzkohlegrill. (2 Spieße)" },
@@ -173,7 +173,7 @@ export const fallbackMenuCategories: MenuCategory[] = [
     name: "Döner",
     image_url: "/assets/cat-doener.jpg",
     display_order: 5,
-    description: "Im Fladenbrot, als Teller oder in der Box – nach afghanischer Art.",
+    description: "Im Fladenbrot, als Teller oder in der Box - nach afghanischer Art.",
     menu_items: [
       { id: "doener-kalb", name: "Döner Kalb", price: 7.5, display_order: 1, description: "Saftiges Kalbfleisch im Fladenbrot mit Salat und Sauce." },
       { id: "doener-haehnchen", name: "Döner Hähnchen", price: 7.5, display_order: 2, description: "Mariniertes Hähnchenfleisch im Fladenbrot mit Salat und Sauce." },
@@ -187,7 +187,7 @@ export const fallbackMenuCategories: MenuCategory[] = [
     name: "Wraps & Spezials",
     image_url: "/assets/cat-wraps.jpg",
     display_order: 6,
-    description: "Vom Grill in den Wrap – mit Salat und hausgemachter Sauce.",
+    description: "Vom Grill in den Wrap - mit Salat und hausgemachter Sauce.",
     menu_items: [
       { id: "shami-wrap", name: "Shami Wrap", price: 8.9, display_order: 1, description: "Gegrilltes Hackfleisch im Wrap mit Salat und Sauce." },
       { id: "tikka-wrap", name: "Tikka Wrap", price: 9.9, display_order: 2, description: "Mariniertes Lammfleisch vom Holzkohlegrill im Wrap mit Salat und Sauce." },
@@ -200,7 +200,7 @@ export const fallbackMenuCategories: MenuCategory[] = [
     name: "Street Pizza",
     image_url: "/assets/cat-pizza.jpg",
     display_order: 7,
-    description: "30 cm, frisch belegt – von Margherita bis Kabul Spezial Tikka.",
+    description: "30 cm, frisch belegt - von Margherita bis Kabul Spezial Tikka.",
     menu_items: [
       { id: "pizza-margherita", name: "Margherita", price: 7.0, display_order: 1, description: "Tomatensauce, Käse und Basilikum." },
       { id: "pizza-doener-fusion", name: "Döner Fusion Pizza", price: 12.9, display_order: 2, description: "Mit Kalb- oder Hähnchen-Dönerfleisch und Käse." },
@@ -228,7 +228,7 @@ export const fallbackMenuCategories: MenuCategory[] = [
     name: "Saucen",
     image_url: "/assets/cat-saucen.jpg",
     display_order: 9,
-    description: "Hausgemachte Chutneys und Saucen – je 1,00 €.",
+    description: "Hausgemachte Chutneys und Saucen - je 1,00 €.",
     menu_items: [
       { id: "sauce-gruene-chutney", name: "Grüne Chutney", price: 1.0, display_order: 1, description: "Peperoni, frische Kräuter und Minzsauce." },
       { id: "sauce-rote-chutney", name: "Rote Chutney", price: 1.0, display_order: 2, description: "Rote Peperoni, frische Kräuter und Chilisauce." },
@@ -292,7 +292,7 @@ export const fallbackContactInfo: ContactInfo[] = [
   { id: "facebook", type: "social", label: "Facebook", value: "Kabul Street Kitchen", display_order: 5 },
   { id: "tiktok", type: "social", label: "TikTok", value: "tiktok.com/@kabulstreetkitchen", display_order: 6 },
   { id: "imprint", type: "imprint", label: "Impressum", value: "Kabul Street Kitchen GmbH", display_order: 7 },
-  { id: "delivery", type: "delivery_time", label: "Lieferzeit", value: "30–45 Minuten", display_order: 8 },
+  { id: "delivery", type: "delivery_time", label: "Lieferzeit", value: "30-45 Minuten", display_order: 8 },
 ];
 
 export const dayOrder = [

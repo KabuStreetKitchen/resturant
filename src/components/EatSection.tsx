@@ -113,7 +113,7 @@ const EatSection = () => {
           ))}
         </div>
 
-        {/* Kabul Platte – set menu highlight */}
+        {/* Kabul Platte - set menu highlight */}
         <div className="mt-12 overflow-hidden rounded-2xl border border-comorin-teal/40 bg-comorin-teal-dark/55 p-8 text-white shadow-[0_40px_120px_hsl(var(--comorin-teal-dark)/0.55)] backdrop-blur-xl sm:p-12">
           <div className="text-center">
             <Star className="mx-auto h-5 w-5 text-comorin-teal-light" />

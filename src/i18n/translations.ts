@@ -2,7 +2,7 @@
 //
 // Scope: UI chrome only (navigation, headings, marketing copy, buttons, labels).
 // The actual menu/drink items and their descriptions stay in their original
-// German/Afghan wording – dish names like "Kabuli Palaw", "Karahi" or "Döner"
+// German/Afghan wording - dish names like "Kabuli Palaw", "Karahi" or "Döner"
 // are proper nouns guests search for, so they are intentionally NOT translated.
 
 export type LanguageCode =
@@ -70,9 +70,9 @@ const de = {
   hero: {
     badgeCharcoal: "Holzkohlegrill",
     badgeKitchen: "Afghanische Kabul Street Kitchen",
-    subtitle: "Authentische afghanische Kabul Street Kitchen – vom Holzkohlegrill.",
+    subtitle: "Authentische afghanische Kabul Street Kitchen - vom Holzkohlegrill.",
     support:
-      "Frisch und mit Herz zubereitet: würzige Kebabspieße, Kabuli Palaw, Karahi und Döner – die Aromen Kabuls direkt vom Grill auf deinen Teller.",
+      "Frisch und mit Herz zubereitet: würzige Kebabspieße, Kabuli Palaw, Karahi und Döner - die Aromen Kabuls direkt vom Grill auf deinen Teller.",
     cta: "Speisekarte ansehen",
     directions: "Route anzeigen",
   },
@@ -80,7 +80,7 @@ const de = {
     badge: "Küche · Holzkohlegrill",
     title: "Speisekarte",
     intro:
-      "Vom Holzkohlegrill, frisch und mit Herz zubereitet: Kebabspieße, Kabuli Palaw, Karahi, Döner und Street Pizza – authentische Aromen aus Kabul.",
+      "Vom Holzkohlegrill, frisch und mit Herz zubereitet: Kebabspieße, Kabuli Palaw, Karahi, Döner und Street Pizza - authentische Aromen aus Kabul.",
     categoryFallback: "Hausgemacht und frisch zubereitet.",
     prep: "Zubereitung",
     prepValue: "Vom Holzkohlegrill",
@@ -95,7 +95,7 @@ const de = {
     badge: "Bar",
     title: "Getränke",
     intro:
-      "Erfrischend und traditionell – afghanischer Tee, Joghurtgetränke und kühle Klassiker zu jedem Gericht.",
+      "Erfrischend und traditionell - afghanischer Tee, Joghurtgetränke und kühle Klassiker zu jedem Gericht.",
     chaiValue: "Würzig",
     dooghValue: "Frisch",
     ayranValue: "Kühl",
@@ -103,8 +103,8 @@ const de = {
   team: {
     badge: "Unsere Geschichte",
     title: "Vom Holzkohlegrill",
-    p1: "Kabul Street Kitchen bringt die Aromen der afghanischen Kabul Street Kitchen direkt zu dir – so, wie man sie an den Garküchen und Basaren Kabuls kennt und liebt.",
-    p2: "Im Mittelpunkt steht der Holzkohlegrill: Über glühenden Kohlen entstehen würzige Kebabspieße, zarte Koteletts und saftiges Hähnchen – frisch und mit Herz zubereitet, ergänzt um traditionellen Kabuli Palaw, Karahi und hausgemachte Teigtaschen.",
+    p1: "Kabul Street Kitchen bringt die Aromen der afghanischen Kabul Street Kitchen direkt zu dir - so, wie man sie an den Garküchen und Basaren Kabuls kennt und liebt.",
+    p2: "Im Mittelpunkt steht der Holzkohlegrill: Über glühenden Kohlen entstehen würzige Kebabspieße, zarte Koteletts und saftiges Hähnchen - frisch und mit Herz zubereitet, ergänzt um traditionellen Kabuli Palaw, Karahi und hausgemachte Teigtaschen.",
     craftLabel: "Unser Handwerk",
     craftValue: "Echtes Holzkohlefeuer",
     standardLabel: "Unser Anspruch",
@@ -151,9 +151,9 @@ const en: TranslationSchema = {
   hero: {
     badgeCharcoal: "Charcoal Grill",
     badgeKitchen: "Afghan Kabul Street Kitchen",
-    subtitle: "Authentic Afghan Kabul Street Kitchen – from the charcoal grill.",
+    subtitle: "Authentic Afghan Kabul Street Kitchen - from the charcoal grill.",
     support:
-      "Freshly prepared with heart: spicy kebab skewers, Kabuli Palaw, Karahi and Döner – the flavours of Kabul straight from the grill to your plate.",
+      "Freshly prepared with heart: spicy kebab skewers, Kabuli Palaw, Karahi and Döner - the flavours of Kabul straight from the grill to your plate.",
     cta: "View menu",
     directions: "Get directions",
   },
@@ -161,7 +161,7 @@ const en: TranslationSchema = {
     badge: "Kitchen · Charcoal Grill",
     title: "Menu",
     intro:
-      "From the charcoal grill, freshly prepared with heart: kebab skewers, Kabuli Palaw, Karahi, Döner and Street Pizza – authentic flavours from Kabul.",
+      "From the charcoal grill, freshly prepared with heart: kebab skewers, Kabuli Palaw, Karahi, Döner and Street Pizza - authentic flavours from Kabul.",
     categoryFallback: "Homemade and freshly prepared.",
     prep: "Preparation",
     prepValue: "From the charcoal grill",
@@ -176,7 +176,7 @@ const en: TranslationSchema = {
     badge: "Bar",
     title: "Drinks",
     intro:
-      "Refreshing and traditional – Afghan tea, yoghurt drinks and cool classics for every dish.",
+      "Refreshing and traditional - Afghan tea, yoghurt drinks and cool classics for every dish.",
     chaiValue: "Spicy",
     dooghValue: "Fresh",
     ayranValue: "Cool",
@@ -184,8 +184,8 @@ const en: TranslationSchema = {
   team: {
     badge: "Our Story",
     title: "From the Charcoal Grill",
-    p1: "Kabul Street Kitchen brings the flavours of Afghan cuisine straight to you – just the way they are known and loved at the food stalls and bazaars of Kabul.",
-    p2: "At the heart of it all is the charcoal grill: over glowing coals we create spicy kebab skewers, tender cutlets and juicy chicken – freshly prepared with heart, rounded out by traditional Kabuli Palaw, Karahi and homemade dumplings.",
+    p1: "Kabul Street Kitchen brings the flavours of Afghan cuisine straight to you - just the way they are known and loved at the food stalls and bazaars of Kabul.",
+    p2: "At the heart of it all is the charcoal grill: over glowing coals we create spicy kebab skewers, tender cutlets and juicy chicken - freshly prepared with heart, rounded out by traditional Kabuli Palaw, Karahi and homemade dumplings.",
     craftLabel: "Our Craft",
     craftValue: "Real charcoal fire",
     standardLabel: "Our Standard",
@@ -228,9 +228,9 @@ const ar: TranslationSchema = {
   hero: {
     badgeCharcoal: "شواية الفحم",
     badgeKitchen: "مطبخ كابول ستريت الأفغاني",
-    subtitle: "مطبخ كابول ستريت الأفغاني الأصيل – من شواية الفحم.",
+    subtitle: "مطبخ كابول ستريت الأفغاني الأصيل - من شواية الفحم.",
     support:
-      "محضّر طازجًا وبكل حب: أسياخ كباب متبّلة، كابلي بلو، كراهي ودونر – نكهات كابول من الشواية مباشرة إلى طبقك.",
+      "محضّر طازجًا وبكل حب: أسياخ كباب متبّلة، كابلي بلو، كراهي ودونر - نكهات كابول من الشواية مباشرة إلى طبقك.",
     cta: "عرض القائمة",
     directions: "عرض الاتجاهات",
   },
@@ -238,7 +238,7 @@ const ar: TranslationSchema = {
     badge: "المطبخ · شواية الفحم",
     title: "قائمة الطعام",
     intro:
-      "من شواية الفحم، محضّر طازجًا وبكل حب: أسياخ الكباب، كابلي بلو، كراهي، دونر وبيتزا الشارع – نكهات أصيلة من كابول.",
+      "من شواية الفحم، محضّر طازجًا وبكل حب: أسياخ الكباب، كابلي بلو، كراهي، دونر وبيتزا الشارع - نكهات أصيلة من كابول.",
     categoryFallback: "محضّر منزليًا وطازجًا.",
     prep: "التحضير",
     prepValue: "من شواية الفحم",
@@ -252,7 +252,7 @@ const ar: TranslationSchema = {
     houseHeading: "شاي ساخن بالهيل، دوغ طازج وعيران.",
     badge: "البار",
     title: "المشروبات",
-    intro: "منعشة وتقليدية – شاي أفغاني، مشروبات الزبادي وكلاسيكيات باردة لكل طبق.",
+    intro: "منعشة وتقليدية - شاي أفغاني، مشروبات الزبادي وكلاسيكيات باردة لكل طبق.",
     chaiValue: "متبّل",
     dooghValue: "طازج",
     ayranValue: "بارد",
@@ -260,8 +260,8 @@ const ar: TranslationSchema = {
   team: {
     badge: "قصتنا",
     title: "من شواية الفحم",
-    p1: "يجلب مطبخ كابول ستريت نكهات المطبخ الأفغاني مباشرة إليك – تمامًا كما تُعرف وتُحب في مطاعم وأسواق كابول.",
-    p2: "في القلب توجد شواية الفحم: فوق الجمر المتوهّج تنشأ أسياخ كباب متبّلة وقطع لحم طرية ودجاج غضّ – محضّرة طازجة وبكل حب، مع كابلي بلو التقليدي وكراهي وفطائر العجين المنزلية.",
+    p1: "يجلب مطبخ كابول ستريت نكهات المطبخ الأفغاني مباشرة إليك - تمامًا كما تُعرف وتُحب في مطاعم وأسواق كابول.",
+    p2: "في القلب توجد شواية الفحم: فوق الجمر المتوهّج تنشأ أسياخ كباب متبّلة وقطع لحم طرية ودجاج غضّ - محضّرة طازجة وبكل حب، مع كابلي بلو التقليدي وكراهي وفطائر العجين المنزلية.",
     craftLabel: "حِرفتنا",
     craftValue: "نار فحم حقيقية",
     standardLabel: "معاييرنا",
@@ -304,9 +304,9 @@ const prs: TranslationSchema = {
   hero: {
     badgeCharcoal: "منقل ذغالی",
     badgeKitchen: "کابل استریت کیچن افغانی",
-    subtitle: "کابل استریت کیچن اصیل افغانی – از منقل ذغالی.",
+    subtitle: "کابل استریت کیچن اصیل افغانی - از منقل ذغالی.",
     support:
-      "تازه و با عشق آماده شده: سیخ‌های کباب معطر، کابلی پلو، کراهی و دونر – طعم‌های کابل مستقیم از منقل به بشقاب شما.",
+      "تازه و با عشق آماده شده: سیخ‌های کباب معطر، کابلی پلو، کراهی و دونر - طعم‌های کابل مستقیم از منقل به بشقاب شما.",
     cta: "دیدن منو",
     directions: "نمایش مسیر",
   },
@@ -314,7 +314,7 @@ const prs: TranslationSchema = {
     badge: "آشپزخانه · منقل ذغالی",
     title: "منوی غذا",
     intro:
-      "از منقل ذغالی، تازه و با عشق آماده شده: سیخ‌های کباب، کابلی پلو، کراهی، دونر و پیتزای خیابانی – طعم‌های اصیل کابل.",
+      "از منقل ذغالی، تازه و با عشق آماده شده: سیخ‌های کباب، کابلی پلو، کراهی، دونر و پیتزای خیابانی - طعم‌های اصیل کابل.",
     categoryFallback: "خانگی و تازه آماده شده.",
     prep: "طرز تهیه",
     prepValue: "از منقل ذغالی",
@@ -329,7 +329,7 @@ const prs: TranslationSchema = {
     badge: "بار",
     title: "نوشیدنی‌ها",
     intro:
-      "تازه و سنتی – چای افغانی، نوشیدنی‌های ماستی و کلاسیک‌های خنک برای هر غذا.",
+      "تازه و سنتی - چای افغانی، نوشیدنی‌های ماستی و کلاسیک‌های خنک برای هر غذا.",
     chaiValue: "معطر",
     dooghValue: "تازه",
     ayranValue: "خنک",
@@ -337,8 +337,8 @@ const prs: TranslationSchema = {
   team: {
     badge: "داستان ما",
     title: "از منقل ذغالی",
-    p1: "کابل استریت کیچن طعم‌های آشپزی افغانی را مستقیم به شما می‌آورد – همان‌گونه که در غذاخوری‌ها و بازارهای کابل شناخته و دوست داشته می‌شود.",
-    p2: "در مرکز آن منقل ذغالی قرار دارد: روی ذغال‌های گداخته سیخ‌های کباب معطر، فیله‌های نرم و مرغ آبدار آماده می‌شود – تازه و با عشق، همراه با کابلی پلو سنتی، کراهی و خمیرهای خانگی.",
+    p1: "کابل استریت کیچن طعم‌های آشپزی افغانی را مستقیم به شما می‌آورد - همان‌گونه که در غذاخوری‌ها و بازارهای کابل شناخته و دوست داشته می‌شود.",
+    p2: "در مرکز آن منقل ذغالی قرار دارد: روی ذغال‌های گداخته سیخ‌های کباب معطر، فیله‌های نرم و مرغ آبدار آماده می‌شود - تازه و با عشق، همراه با کابلی پلو سنتی، کراهی و خمیرهای خانگی.",
     craftLabel: "هنر ما",
     craftValue: "آتش واقعی ذغال",
     standardLabel: "معیار ما",
@@ -381,9 +381,9 @@ const zh: TranslationSchema = {
   hero: {
     badgeCharcoal: "炭火烤架",
     badgeKitchen: "阿富汗喀布尔街头厨房",
-    subtitle: "正宗阿富汗喀布尔街头厨房 — 炭火烤制。",
+    subtitle: "正宗阿富汗喀布尔街头厨房 - 炭火烤制。",
     support:
-      "用心新鲜烹制：香辣烤肉串、Kabuli Palaw、Karahi 和 Döner — 把喀布尔的风味从烤架直接送到您的餐盘。",
+      "用心新鲜烹制：香辣烤肉串、Kabuli Palaw、Karahi 和 Döner - 把喀布尔的风味从烤架直接送到您的餐盘。",
     cta: "查看菜单",
     directions: "查看路线",
   },
@@ -391,7 +391,7 @@ const zh: TranslationSchema = {
     badge: "厨房 · 炭火烤架",
     title: "菜单",
     intro:
-      "炭火烤制，用心新鲜烹制：烤肉串、Kabuli Palaw、Karahi、Döner 和街头披萨 — 来自喀布尔的正宗风味。",
+      "炭火烤制，用心新鲜烹制：烤肉串、Kabuli Palaw、Karahi、Döner 和街头披萨 - 来自喀布尔的正宗风味。",
     categoryFallback: "自制，新鲜烹饪。",
     prep: "烹制",
     prepValue: "炭火烤制",
@@ -405,7 +405,7 @@ const zh: TranslationSchema = {
     houseHeading: "加入豆蔻的热茶、新鲜 Doogh 和 Ayran。",
     badge: "酒吧",
     title: "饮品",
-    intro: "清爽而传统 — 阿富汗茶、酸奶饮品和清凉经典，搭配每道菜肴。",
+    intro: "清爽而传统 - 阿富汗茶、酸奶饮品和清凉经典，搭配每道菜肴。",
     chaiValue: "香浓",
     dooghValue: "新鲜",
     ayranValue: "清凉",
@@ -413,8 +413,8 @@ const zh: TranslationSchema = {
   team: {
     badge: "我们的故事",
     title: "炭火烤制",
-    p1: "喀布尔街头厨房将阿富汗美食的风味直接带给您 — 正如人们在喀布尔的街边小吃摊和集市上熟知并喜爱的那样。",
-    p2: "核心是炭火烤架：在炽热的炭火上烤制香辣肉串、嫩煎肉排和多汁鸡肉 — 用心新鲜烹制，并搭配传统的 Kabuli Palaw、Karahi 和自制饺子。",
+    p1: "喀布尔街头厨房将阿富汗美食的风味直接带给您 - 正如人们在喀布尔的街边小吃摊和集市上熟知并喜爱的那样。",
+    p2: "核心是炭火烤架：在炽热的炭火上烤制香辣肉串、嫩煎肉排和多汁鸡肉 - 用心新鲜烹制，并搭配传统的 Kabuli Palaw、Karahi 和自制饺子。",
     craftLabel: "我们的手艺",
     craftValue: "真正的炭火",
     standardLabel: "我们的追求",
@@ -457,9 +457,9 @@ const ja: TranslationSchema = {
   hero: {
     badgeCharcoal: "炭火グリル",
     badgeKitchen: "アフガニスタンのカブール・ストリート・キッチン",
-    subtitle: "本格アフガニスタン カブール・ストリート・キッチン — 炭火焼き。",
+    subtitle: "本格アフガニスタン カブール・ストリート・キッチン - 炭火焼き。",
     support:
-      "心を込めて新鮮に調理：スパイシーなケバブ串、カブリ・パラウ、カラヒ、ドネル — カブールの味わいをグリルから直接お皿へ。",
+      "心を込めて新鮮に調理：スパイシーなケバブ串、カブリ・パラウ、カラヒ、ドネル - カブールの味わいをグリルから直接お皿へ。",
     cta: "メニューを見る",
     directions: "ルートを見る",
   },
@@ -467,7 +467,7 @@ const ja: TranslationSchema = {
     badge: "キッチン · 炭火グリル",
     title: "メニュー",
     intro:
-      "炭火で、心を込めて新鮮に調理：ケバブ串、カブリ・パラウ、カラヒ、ドネル、ストリートピザ — カブールの本格的な味わい。",
+      "炭火で、心を込めて新鮮に調理：ケバブ串、カブリ・パラウ、カラヒ、ドネル、ストリートピザ - カブールの本格的な味わい。",
     categoryFallback: "自家製、できたて。",
     prep: "調理法",
     prepValue: "炭火焼き",
@@ -482,7 +482,7 @@ const ja: TranslationSchema = {
     badge: "バー",
     title: "ドリンク",
     intro:
-      "爽やかで伝統的 — アフガニスタンのお茶、ヨーグルトドリンク、どんな料理にも合う冷たい定番。",
+      "爽やかで伝統的 - アフガニスタンのお茶、ヨーグルトドリンク、どんな料理にも合う冷たい定番。",
     chaiValue: "スパイシー",
     dooghValue: "フレッシュ",
     ayranValue: "クール",
@@ -490,8 +490,8 @@ const ja: TranslationSchema = {
   team: {
     badge: "私たちの物語",
     title: "炭火焼き",
-    p1: "カブール・ストリート・キッチンは、アフガニスタン料理の味わいをそのままお届けします — カブールの食堂やバザールで親しまれ愛されてきた、あの味を。",
-    p2: "中心にあるのは炭火グリル。燃える炭の上で、スパイシーなケバブ串、柔らかいカツレツ、ジューシーなチキンを焼き上げます — 心を込めて新鮮に、伝統的なカブリ・パラウ、カラヒ、自家製の包み料理とともに。",
+    p1: "カブール・ストリート・キッチンは、アフガニスタン料理の味わいをそのままお届けします - カブールの食堂やバザールで親しまれ愛されてきた、あの味を。",
+    p2: "中心にあるのは炭火グリル。燃える炭の上で、スパイシーなケバブ串、柔らかいカツレツ、ジューシーなチキンを焼き上げます - 心を込めて新鮮に、伝統的なカブリ・パラウ、カラヒ、自家製の包み料理とともに。",
     craftLabel: "私たちの技",
     craftValue: "本物の炭火",
     standardLabel: "私たちのこだわり",
@@ -534,9 +534,9 @@ const hi: TranslationSchema = {
   hero: {
     badgeCharcoal: "कोयला ग्रिल",
     badgeKitchen: "अफ़ग़ान काबुल स्ट्रीट किचन",
-    subtitle: "प्रामाणिक अफ़ग़ान काबुल स्ट्रीट किचन – कोयले की ग्रिल से।",
+    subtitle: "प्रामाणिक अफ़ग़ान काबुल स्ट्रीट किचन - कोयले की ग्रिल से।",
     support:
-      "ताज़ा और दिल से बनाया गया: मसालेदार कबाब सीख, काबुली पुलाव, कराही और डोनर – काबुल के स्वाद सीधे ग्रिल से आपकी थाली तक।",
+      "ताज़ा और दिल से बनाया गया: मसालेदार कबाब सीख, काबुली पुलाव, कराही और डोनर - काबुल के स्वाद सीधे ग्रिल से आपकी थाली तक।",
     cta: "मेन्यू देखें",
     directions: "रास्ता देखें",
   },
@@ -544,7 +544,7 @@ const hi: TranslationSchema = {
     badge: "रसोई · कोयला ग्रिल",
     title: "मेन्यू",
     intro:
-      "कोयले की ग्रिल से, ताज़ा और दिल से बनाया गया: कबाब सीख, काबुली पुलाव, कराही, डोनर और स्ट्रीट पिज़्ज़ा – काबुल के प्रामाणिक स्वाद।",
+      "कोयले की ग्रिल से, ताज़ा और दिल से बनाया गया: कबाब सीख, काबुली पुलाव, कराही, डोनर और स्ट्रीट पिज़्ज़ा - काबुल के प्रामाणिक स्वाद।",
     categoryFallback: "घर का बना और ताज़ा तैयार।",
     prep: "तैयारी",
     prepValue: "कोयले की ग्रिल से",
@@ -559,7 +559,7 @@ const hi: TranslationSchema = {
     badge: "बार",
     title: "पेय",
     intro:
-      "ताज़गी भरे और पारंपरिक – अफ़ग़ान चाय, दही के पेय और हर व्यंजन के साथ ठंडे क्लासिक।",
+      "ताज़गी भरे और पारंपरिक - अफ़ग़ान चाय, दही के पेय और हर व्यंजन के साथ ठंडे क्लासिक।",
     chaiValue: "मसालेदार",
     dooghValue: "ताज़ा",
     ayranValue: "ठंडा",
@@ -567,8 +567,8 @@ const hi: TranslationSchema = {
   team: {
     badge: "हमारी कहानी",
     title: "कोयले की ग्रिल से",
-    p1: "काबुल स्ट्रीट किचन अफ़ग़ान व्यंजनों के स्वाद सीधे आप तक लाता है – ठीक वैसे ही जैसे काबुल के खाने के ठेलों और बाज़ारों में इन्हें जाना और पसंद किया जाता है।",
-    p2: "केंद्र में है कोयले की ग्रिल: दहकते कोयलों पर बनते हैं मसालेदार कबाब सीख, नरम चॉप और रसीला चिकन – ताज़ा और दिल से बनाया गया, साथ में पारंपरिक काबुली पुलाव, कराही और घर के बने पकौड़े-समोसे।",
+    p1: "काबुल स्ट्रीट किचन अफ़ग़ान व्यंजनों के स्वाद सीधे आप तक लाता है - ठीक वैसे ही जैसे काबुल के खाने के ठेलों और बाज़ारों में इन्हें जाना और पसंद किया जाता है।",
+    p2: "केंद्र में है कोयले की ग्रिल: दहकते कोयलों पर बनते हैं मसालेदार कबाब सीख, नरम चॉप और रसीला चिकन - ताज़ा और दिल से बनाया गया, साथ में पारंपरिक काबुली पुलाव, कराही और घर के बने पकौड़े-समोसे।",
     craftLabel: "हमारा हुनर",
     craftValue: "असली कोयले की आग",
     standardLabel: "हमारा मानक",
@@ -611,9 +611,9 @@ const nl: TranslationSchema = {
   hero: {
     badgeCharcoal: "Houtskoolgrill",
     badgeKitchen: "Afghaanse Kabul Street Kitchen",
-    subtitle: "Authentieke Afghaanse Kabul Street Kitchen – van de houtskoolgrill.",
+    subtitle: "Authentieke Afghaanse Kabul Street Kitchen - van de houtskoolgrill.",
     support:
-      "Vers en met liefde bereid: pittige kebabspiesen, Kabuli Palaw, Karahi en Döner – de smaken van Kaboel rechtstreeks van de grill op je bord.",
+      "Vers en met liefde bereid: pittige kebabspiesen, Kabuli Palaw, Karahi en Döner - de smaken van Kaboel rechtstreeks van de grill op je bord.",
     cta: "Bekijk de menukaart",
     directions: "Route bekijken",
   },
@@ -621,7 +621,7 @@ const nl: TranslationSchema = {
     badge: "Keuken · Houtskoolgrill",
     title: "Menukaart",
     intro:
-      "Van de houtskoolgrill, vers en met liefde bereid: kebabspiesen, Kabuli Palaw, Karahi, Döner en Street Pizza – authentieke smaken uit Kaboel.",
+      "Van de houtskoolgrill, vers en met liefde bereid: kebabspiesen, Kabuli Palaw, Karahi, Döner en Street Pizza - authentieke smaken uit Kaboel.",
     categoryFallback: "Huisgemaakt en vers bereid.",
     prep: "Bereiding",
     prepValue: "Van de houtskoolgrill",
@@ -636,7 +636,7 @@ const nl: TranslationSchema = {
     badge: "Bar",
     title: "Dranken",
     intro:
-      "Verfrissend en traditioneel – Afghaanse thee, yoghurtdranken en koele klassiekers bij elk gerecht.",
+      "Verfrissend en traditioneel - Afghaanse thee, yoghurtdranken en koele klassiekers bij elk gerecht.",
     chaiValue: "Kruidig",
     dooghValue: "Vers",
     ayranValue: "Koel",
@@ -644,8 +644,8 @@ const nl: TranslationSchema = {
   team: {
     badge: "Ons verhaal",
     title: "Van de houtskoolgrill",
-    p1: "Kabul Street Kitchen brengt de smaken van de Afghaanse keuken rechtstreeks naar jou – zoals men ze kent en liefheeft bij de eetstalletjes en bazaars van Kaboel.",
-    p2: "Centraal staat de houtskoolgrill: boven gloeiende kolen ontstaan pittige kebabspiesen, malse koteletten en sappige kip – vers en met liefde bereid, aangevuld met traditionele Kabuli Palaw, Karahi en huisgemaakte deeghapjes.",
+    p1: "Kabul Street Kitchen brengt de smaken van de Afghaanse keuken rechtstreeks naar jou - zoals men ze kent en liefheeft bij de eetstalletjes en bazaars van Kaboel.",
+    p2: "Centraal staat de houtskoolgrill: boven gloeiende kolen ontstaan pittige kebabspiesen, malse koteletten en sappige kip - vers en met liefde bereid, aangevuld met traditionele Kabuli Palaw, Karahi en huisgemaakte deeghapjes.",
     craftLabel: "Ons vakmanschap",
     craftValue: "Echt houtskoolvuur",
     standardLabel: "Onze ambitie",
@@ -688,9 +688,9 @@ const fr: TranslationSchema = {
   hero: {
     badgeCharcoal: "Gril au charbon",
     badgeKitchen: "Kabul Street Kitchen afghane",
-    subtitle: "Authentique Kabul Street Kitchen afghane – au gril au charbon de bois.",
+    subtitle: "Authentique Kabul Street Kitchen afghane - au gril au charbon de bois.",
     support:
-      "Préparé frais et avec cœur : brochettes de kebab épicées, Kabuli Palaw, Karahi et Döner – les saveurs de Kaboul, du gril directement dans votre assiette.",
+      "Préparé frais et avec cœur : brochettes de kebab épicées, Kabuli Palaw, Karahi et Döner - les saveurs de Kaboul, du gril directement dans votre assiette.",
     cta: "Voir la carte",
     directions: "Voir l'itinéraire",
   },
@@ -698,7 +698,7 @@ const fr: TranslationSchema = {
     badge: "Cuisine · Gril au charbon",
     title: "Carte",
     intro:
-      "Au gril au charbon, préparé frais et avec cœur : brochettes de kebab, Kabuli Palaw, Karahi, Döner et Street Pizza – des saveurs authentiques de Kaboul.",
+      "Au gril au charbon, préparé frais et avec cœur : brochettes de kebab, Kabuli Palaw, Karahi, Döner et Street Pizza - des saveurs authentiques de Kaboul.",
     categoryFallback: "Fait maison et préparé frais.",
     prep: "Préparation",
     prepValue: "Au gril au charbon",
@@ -713,7 +713,7 @@ const fr: TranslationSchema = {
     badge: "Bar",
     title: "Boissons",
     intro:
-      "Rafraîchissant et traditionnel – thé afghan, boissons au yaourt et classiques frais pour chaque plat.",
+      "Rafraîchissant et traditionnel - thé afghan, boissons au yaourt et classiques frais pour chaque plat.",
     chaiValue: "Épicé",
     dooghValue: "Frais",
     ayranValue: "Bien frais",
@@ -721,8 +721,8 @@ const fr: TranslationSchema = {
   team: {
     badge: "Notre histoire",
     title: "Du gril au charbon",
-    p1: "Kabul Street Kitchen vous apporte les saveurs de la cuisine afghane directement – telles qu'on les connaît et qu'on les aime dans les gargotes et les bazars de Kaboul.",
-    p2: "Au cœur de tout, le gril au charbon : sur les braises rougeoyantes naissent des brochettes de kebab épicées, des côtelettes tendres et du poulet juteux – préparés frais et avec cœur, accompagnés du traditionnel Kabuli Palaw, du Karahi et de raviolis faits maison.",
+    p1: "Kabul Street Kitchen vous apporte les saveurs de la cuisine afghane directement - telles qu'on les connaît et qu'on les aime dans les gargotes et les bazars de Kaboul.",
+    p2: "Au cœur de tout, le gril au charbon : sur les braises rougeoyantes naissent des brochettes de kebab épicées, des côtelettes tendres et du poulet juteux - préparés frais et avec cœur, accompagnés du traditionnel Kabuli Palaw, du Karahi et de raviolis faits maison.",
     craftLabel: "Notre savoir-faire",
     craftValue: "Vrai feu de charbon",
     standardLabel: "Notre exigence",
@@ -765,9 +765,9 @@ const it: TranslationSchema = {
   hero: {
     badgeCharcoal: "Griglia a carbone",
     badgeKitchen: "Kabul Street Kitchen afghana",
-    subtitle: "Autentica Kabul Street Kitchen afghana – dalla griglia a carbone.",
+    subtitle: "Autentica Kabul Street Kitchen afghana - dalla griglia a carbone.",
     support:
-      "Preparato fresco e con cuore: spiedini di kebab speziati, Kabuli Palaw, Karahi e Döner – i sapori di Kabul dalla griglia direttamente nel tuo piatto.",
+      "Preparato fresco e con cuore: spiedini di kebab speziati, Kabuli Palaw, Karahi e Döner - i sapori di Kabul dalla griglia direttamente nel tuo piatto.",
     cta: "Vedi il menù",
     directions: "Mostra indicazioni",
   },
@@ -775,7 +775,7 @@ const it: TranslationSchema = {
     badge: "Cucina · Griglia a carbone",
     title: "Menù",
     intro:
-      "Dalla griglia a carbone, preparato fresco e con cuore: spiedini di kebab, Kabuli Palaw, Karahi, Döner e Street Pizza – sapori autentici di Kabul.",
+      "Dalla griglia a carbone, preparato fresco e con cuore: spiedini di kebab, Kabuli Palaw, Karahi, Döner e Street Pizza - sapori autentici di Kabul.",
     categoryFallback: "Fatto in casa e preparato fresco.",
     prep: "Preparazione",
     prepValue: "Dalla griglia a carbone",
@@ -790,7 +790,7 @@ const it: TranslationSchema = {
     badge: "Bar",
     title: "Bevande",
     intro:
-      "Rinfrescanti e tradizionali – tè afghano, bevande allo yogurt e classici freschi per ogni piatto.",
+      "Rinfrescanti e tradizionali - tè afghano, bevande allo yogurt e classici freschi per ogni piatto.",
     chaiValue: "Speziato",
     dooghValue: "Fresco",
     ayranValue: "Freddo",
@@ -798,8 +798,8 @@ const it: TranslationSchema = {
   team: {
     badge: "La nostra storia",
     title: "Dalla griglia a carbone",
-    p1: "Kabul Street Kitchen porta i sapori della cucina afghana direttamente da te – proprio come si conoscono e si amano nelle bancarelle e nei bazar di Kabul.",
-    p2: "Al centro c'è la griglia a carbone: sulle braci ardenti nascono spiedini di kebab speziati, tenere costolette e pollo succoso – preparati freschi e con cuore, accompagnati dal tradizionale Kabuli Palaw, dal Karahi e dai ravioli fatti in casa.",
+    p1: "Kabul Street Kitchen porta i sapori della cucina afghana direttamente da te - proprio come si conoscono e si amano nelle bancarelle e nei bazar di Kabul.",
+    p2: "Al centro c'è la griglia a carbone: sulle braci ardenti nascono spiedini di kebab speziati, tenere costolette e pollo succoso - preparati freschi e con cuore, accompagnati dal tradizionale Kabuli Palaw, dal Karahi e dai ravioli fatti in casa.",
     craftLabel: "La nostra arte",
     craftValue: "Vero fuoco a carbone",
     standardLabel: "La nostra ambizione",
@@ -842,9 +842,9 @@ const es: TranslationSchema = {
   hero: {
     badgeCharcoal: "Parrilla de carbón",
     badgeKitchen: "Kabul Street Kitchen afgana",
-    subtitle: "Auténtica Kabul Street Kitchen afgana – de la parrilla de carbón.",
+    subtitle: "Auténtica Kabul Street Kitchen afgana - de la parrilla de carbón.",
     support:
-      "Preparado fresco y con cariño: brochetas de kebab especiadas, Kabuli Palaw, Karahi y Döner – los sabores de Kabul de la parrilla directamente a tu plato.",
+      "Preparado fresco y con cariño: brochetas de kebab especiadas, Kabuli Palaw, Karahi y Döner - los sabores de Kabul de la parrilla directamente a tu plato.",
     cta: "Ver la carta",
     directions: "Ver cómo llegar",
   },
@@ -852,7 +852,7 @@ const es: TranslationSchema = {
     badge: "Cocina · Parrilla de carbón",
     title: "Carta",
     intro:
-      "De la parrilla de carbón, preparado fresco y con cariño: brochetas de kebab, Kabuli Palaw, Karahi, Döner y Street Pizza – sabores auténticos de Kabul.",
+      "De la parrilla de carbón, preparado fresco y con cariño: brochetas de kebab, Kabuli Palaw, Karahi, Döner y Street Pizza - sabores auténticos de Kabul.",
     categoryFallback: "Casero y recién preparado.",
     prep: "Preparación",
     prepValue: "De la parrilla de carbón",
@@ -867,7 +867,7 @@ const es: TranslationSchema = {
     badge: "Bar",
     title: "Bebidas",
     intro:
-      "Refrescantes y tradicionales – té afgano, bebidas de yogur y clásicos fríos para cada plato.",
+      "Refrescantes y tradicionales - té afgano, bebidas de yogur y clásicos fríos para cada plato.",
     chaiValue: "Especiado",
     dooghValue: "Fresco",
     ayranValue: "Frío",
@@ -875,8 +875,8 @@ const es: TranslationSchema = {
   team: {
     badge: "Nuestra historia",
     title: "De la parrilla de carbón",
-    p1: "Kabul Street Kitchen trae los sabores de la cocina afgana directamente a ti – tal como se conocen y se aman en los puestos de comida y bazares de Kabul.",
-    p2: "En el centro está la parrilla de carbón: sobre las brasas ardientes nacen brochetas de kebab especiadas, tiernas chuletas y jugoso pollo – preparados frescos y con cariño, acompañados del tradicional Kabuli Palaw, Karahi y empanadillas caseras.",
+    p1: "Kabul Street Kitchen trae los sabores de la cocina afgana directamente a ti - tal como se conocen y se aman en los puestos de comida y bazares de Kabul.",
+    p2: "En el centro está la parrilla de carbón: sobre las brasas ardientes nacen brochetas de kebab especiadas, tiernas chuletas y jugoso pollo - preparados frescos y con cariño, acompañados del tradicional Kabuli Palaw, Karahi y empanadillas caseras.",
     craftLabel: "Nuestro oficio",
     craftValue: "Auténtico fuego de carbón",
     standardLabel: "Nuestra exigencia",
@@ -919,9 +919,9 @@ const el: TranslationSchema = {
   hero: {
     badgeCharcoal: "Σχάρα κάρβουνου",
     badgeKitchen: "Αφγανικό Kabul Street Kitchen",
-    subtitle: "Αυθεντικό αφγανικό Kabul Street Kitchen – από τη σχάρα κάρβουνου.",
+    subtitle: "Αυθεντικό αφγανικό Kabul Street Kitchen - από τη σχάρα κάρβουνου.",
     support:
-      "Φτιαγμένο φρέσκο και με μεράκι: πικάντικα σουβλάκια κεμπάπ, Kabuli Palaw, Karahi και Döner – οι γεύσεις της Καμπούλ από τη σχάρα κατευθείαν στο πιάτο σας.",
+      "Φτιαγμένο φρέσκο και με μεράκι: πικάντικα σουβλάκια κεμπάπ, Kabuli Palaw, Karahi και Döner - οι γεύσεις της Καμπούλ από τη σχάρα κατευθείαν στο πιάτο σας.",
     cta: "Δείτε το μενού",
     directions: "Οδηγίες διαδρομής",
   },
@@ -929,7 +929,7 @@ const el: TranslationSchema = {
     badge: "Κουζίνα · Σχάρα κάρβουνου",
     title: "Μενού",
     intro:
-      "Από τη σχάρα κάρβουνου, φτιαγμένο φρέσκο και με μεράκι: σουβλάκια κεμπάπ, Kabuli Palaw, Karahi, Döner και Street Pizza – αυθεντικές γεύσεις από την Καμπούλ.",
+      "Από τη σχάρα κάρβουνου, φτιαγμένο φρέσκο και με μεράκι: σουβλάκια κεμπάπ, Kabuli Palaw, Karahi, Döner και Street Pizza - αυθεντικές γεύσεις από την Καμπούλ.",
     categoryFallback: "Σπιτικό και φρεσκοφτιαγμένο.",
     prep: "Παρασκευή",
     prepValue: "Από τη σχάρα κάρβουνου",
@@ -944,7 +944,7 @@ const el: TranslationSchema = {
     badge: "Μπαρ",
     title: "Ποτά",
     intro:
-      "Δροσιστικά και παραδοσιακά – αφγανικό τσάι, ροφήματα γιαουρτιού και δροσερά κλασικά για κάθε πιάτο.",
+      "Δροσιστικά και παραδοσιακά - αφγανικό τσάι, ροφήματα γιαουρτιού και δροσερά κλασικά για κάθε πιάτο.",
     chaiValue: "Πικάντικο",
     dooghValue: "Φρέσκο",
     ayranValue: "Δροσερό",
@@ -952,8 +952,8 @@ const el: TranslationSchema = {
   team: {
     badge: "Η ιστορία μας",
     title: "Από τη σχάρα κάρβουνου",
-    p1: "Το Kabul Street Kitchen φέρνει τις γεύσεις της αφγανικής κουζίνας κατευθείαν σε εσάς – όπως τις γνωρίζουν και τις αγαπούν στα στέκια φαγητού και τα παζάρια της Καμπούλ.",
-    p2: "Στο επίκεντρο βρίσκεται η σχάρα κάρβουνου: πάνω από τα πυρωμένα κάρβουνα γεννιούνται πικάντικα σουβλάκια κεμπάπ, τρυφερά παϊδάκια και ζουμερό κοτόπουλο – φτιαγμένα φρέσκα και με μεράκι, συνοδευόμενα από παραδοσιακό Kabuli Palaw, Karahi και σπιτικά ζυμαρικά.",
+    p1: "Το Kabul Street Kitchen φέρνει τις γεύσεις της αφγανικής κουζίνας κατευθείαν σε εσάς - όπως τις γνωρίζουν και τις αγαπούν στα στέκια φαγητού και τα παζάρια της Καμπούλ.",
+    p2: "Στο επίκεντρο βρίσκεται η σχάρα κάρβουνου: πάνω από τα πυρωμένα κάρβουνα γεννιούνται πικάντικα σουβλάκια κεμπάπ, τρυφερά παϊδάκια και ζουμερό κοτόπουλο - φτιαγμένα φρέσκα και με μεράκι, συνοδευόμενα από παραδοσιακό Kabuli Palaw, Karahi και σπιτικά ζυμαρικά.",
     craftLabel: "Η τέχνη μας",
     craftValue: "Αληθινή φωτιά κάρβουνου",
     standardLabel: "Η φιλοδοξία μας",
