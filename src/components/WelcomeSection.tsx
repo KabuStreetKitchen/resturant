@@ -167,7 +167,7 @@ const WelcomeSection = () => {
                 </div>
               </div>
 
-              <div className="space-y-2">
+              <div className="hidden space-y-2 sm:block">
                 {sortedOpeningHours.map((item) => (
                   <div
                     key={item.key}
