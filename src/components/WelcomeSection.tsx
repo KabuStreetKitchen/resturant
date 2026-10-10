@@ -141,8 +141,8 @@ const WelcomeSection = () => {
             </div>
           </div>
 
-          <aside className="depth-stage hidden justify-self-end lg:block">
-            <div className="hero-hours-panel w-[360px] rounded-lg border border-white/16 bg-comorin-teal-dark/35 p-5 text-white shadow-[0_32px_100px_hsl(var(--comorin-teal-dark)/0.5)] backdrop-blur-xl">
+          <aside className="depth-stage w-full max-w-[360px] justify-self-center lg:justify-self-end">
+            <div className="hero-hours-panel w-full rounded-lg border border-white/16 bg-comorin-teal-dark/35 p-5 text-white shadow-[0_32px_100px_hsl(var(--comorin-teal-dark)/0.5)] backdrop-blur-xl">
               <div className="mb-5 flex items-center justify-between">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.28em] text-comorin-teal-light">{t.hours.today}</p>
@@ -150,7 +150,7 @@ const WelcomeSection = () => {
                     {todayHours?.isClosed ? t.hours.closed : t.hours.openToday}
                   </h2>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="hidden items-center gap-3 sm:flex">
                   <a
                     href={address ? directionsUrl(address.value) : undefined}
                     aria-label={t.hero.directions}
