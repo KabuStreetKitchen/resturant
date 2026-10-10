@@ -155,6 +155,8 @@ const WelcomeSection = () => {
                     href={address ? directionsUrl(address.value) : undefined}
                     aria-label={t.hero.directions}
                     title={t.hero.directions}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="grid h-12 w-12 place-items-center rounded-full border border-[hsl(var(--comorin-teal-light)/0.45)] bg-[hsl(var(--comorin-teal)/0.25)] text-comorin-teal-light shadow-[0_10px_28px_hsl(var(--comorin-teal)/0.35)] backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:bg-[hsl(var(--comorin-teal)/0.4)]"
                   >
                     <MapPin className="h-5 w-5" />
