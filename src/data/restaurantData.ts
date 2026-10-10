@@ -92,7 +92,7 @@ export const normalizeDrinkCategories = (categories: DrinkCategory[]): DrinkCate
 
 export const fallbackOpeningHours: OpeningHour[] = [
   { day: "Monday",    open: "11:00:00", close: "22:00:00" },
-  { day: "Tuesday",   open: "11:00:00", close: "22:00:00" },
+  { day: "Tuesday",   open: null,       close: null },
   { day: "Wednesday", open: "11:00:00", close: "22:00:00" },
   { day: "Thursday",  open: "11:00:00", close: "22:00:00" },
   { day: "Friday",    open: "11:00:00", close: "00:00:00" },
@@ -103,7 +103,7 @@ export const fallbackOpeningHours: OpeningHour[] = [
   day_of_week: day,
   open_time: open,
   close_time: close,
-  is_closed: false,
+  is_closed: open === null,
 }));
 
 export const fallbackMenuCategories: MenuCategory[] = [

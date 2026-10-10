@@ -12,11 +12,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-comorin-gradient">
       <Navigation />
-      <WelcomeSection />
-      <EatSection />
-      <DrinkSection />
-      <TeamSection />
-      <ContactSection />
+      <main>
+        <WelcomeSection />
+        <EatSection />
+        <DrinkSection />
+        <TeamSection />
+        <ContactSection />
+      </main>
     </div>
   );
 };

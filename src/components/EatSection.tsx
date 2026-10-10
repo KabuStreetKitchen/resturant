@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { Flame, Star, Truck, Utensils } from "lucide-react";
 import grillSpread from "@/assets/grill.jpg";
 import kabulLogo from "@/assets/kabul-logo.jpg";
@@ -12,18 +11,14 @@ const EatSection = () => {
   const platte = fallbackKabulPlatte;
   const { t } = useTranslation();
 
-  const featuredItems = useMemo(
-    () =>
-      menuCategories
-        .flatMap((category) =>
-          category.menu_items.slice(0, 1).map((item) => ({
-            ...item,
-            category: category.name,
-          })),
-        )
-        .slice(0, 4),
-    [menuCategories],
-  );
+  const featuredItems = menuCategories
+    .flatMap((category) =>
+      category.menu_items.slice(0, 1).map((item) => ({
+        ...item,
+        category: category.name,
+      })),
+    )
+    .slice(0, 4);
 
   return (
     <section id="eat" className="section-band section-band-eat relative isolate overflow-hidden">

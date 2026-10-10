@@ -235,23 +235,26 @@
 
   .contact-tile {
     display: flex;
-    min-height: 96px;
+    overflow-wrap: anywhere;
     gap: 14px;
     align-items: flex-start;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 8px;
-    background: hsl(var(--comorin-teal-dark) / 0.5);
-    padding: 18px;
+    background: rgba(255, 255, 255, 0.07);
+    padding: 16px;
     color: white;
     text-decoration: none;
-    backdrop-filter: blur(18px);
     transition: transform 300ms ease, background 300ms ease, border-color 300ms ease;
   }
 
   .contact-tile:hover {
     transform: translateY(-3px);
     border-color: hsl(var(--comorin-teal-light) / 0.55);
-    background: hsl(var(--comorin-teal-dark) / 0.62);
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .contact-tile > span {
+    min-width: 0;
   }
 }
 

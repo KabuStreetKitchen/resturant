@@ -1,7 +1,7 @@
 // Data-only export of all public tables using the anon key (RLS public-read).
 // Usage: node scripts/export-db.mjs
 import { createClient } from '@supabase/supabase-js';
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -18,10 +18,11 @@ function loadEnv(path) {
   return env;
 }
 
-const env = loadEnv(join(root, '.env'));
+const envPath = existsSync(join(root, '.env')) ? '.env' : '.env.local';
+const env = loadEnv(join(root, envPath));
 const url = env.VITE_SUPABASE_URL;
 const key = env.VITE_SUPABASE_ANON_KEY;
-if (!url || !key) throw new Error('Missing VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY in .env');
+if (!url || !key) throw new Error(`Missing VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY in ${envPath}`);
 
 const supabase = createClient(url, key);
 

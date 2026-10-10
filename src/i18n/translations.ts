@@ -74,6 +74,7 @@ const de = {
     support:
       "Frisch und mit Herz zubereitet: würzige Kebabspieße, Kabuli Palaw, Karahi und Döner – die Aromen Kabuls direkt vom Grill auf deinen Teller.",
     cta: "Speisekarte ansehen",
+    directions: "Route anzeigen",
   },
   eat: {
     badge: "Küche · Holzkohlegrill",
@@ -154,6 +155,7 @@ const en: TranslationSchema = {
     support:
       "Freshly prepared with heart: spicy kebab skewers, Kabuli Palaw, Karahi and Döner – the flavours of Kabul straight from the grill to your plate.",
     cta: "View menu",
+    directions: "Get directions",
   },
   eat: {
     badge: "Kitchen · Charcoal Grill",
@@ -230,6 +232,7 @@ const ar: TranslationSchema = {
     support:
       "محضّر طازجًا وبكل حب: أسياخ كباب متبّلة، كابلي بلو، كراهي ودونر – نكهات كابول من الشواية مباشرة إلى طبقك.",
     cta: "عرض القائمة",
+    directions: "عرض الاتجاهات",
   },
   eat: {
     badge: "المطبخ · شواية الفحم",
@@ -305,6 +308,7 @@ const prs: TranslationSchema = {
     support:
       "تازه و با عشق آماده شده: سیخ‌های کباب معطر، کابلی پلو، کراهی و دونر – طعم‌های کابل مستقیم از منقل به بشقاب شما.",
     cta: "دیدن منو",
+    directions: "نمایش مسیر",
   },
   eat: {
     badge: "آشپزخانه · منقل ذغالی",
@@ -381,6 +385,7 @@ const zh: TranslationSchema = {
     support:
       "用心新鲜烹制：香辣烤肉串、Kabuli Palaw、Karahi 和 Döner — 把喀布尔的风味从烤架直接送到您的餐盘。",
     cta: "查看菜单",
+    directions: "查看路线",
   },
   eat: {
     badge: "厨房 · 炭火烤架",
@@ -456,6 +461,7 @@ const ja: TranslationSchema = {
     support:
       "心を込めて新鮮に調理：スパイシーなケバブ串、カブリ・パラウ、カラヒ、ドネル — カブールの味わいをグリルから直接お皿へ。",
     cta: "メニューを見る",
+    directions: "ルートを見る",
   },
   eat: {
     badge: "キッチン · 炭火グリル",
@@ -532,6 +538,7 @@ const hi: TranslationSchema = {
     support:
       "ताज़ा और दिल से बनाया गया: मसालेदार कबाब सीख, काबुली पुलाव, कराही और डोनर – काबुल के स्वाद सीधे ग्रिल से आपकी थाली तक।",
     cta: "मेन्यू देखें",
+    directions: "रास्ता देखें",
   },
   eat: {
     badge: "रसोई · कोयला ग्रिल",
@@ -608,6 +615,7 @@ const nl: TranslationSchema = {
     support:
       "Vers en met liefde bereid: pittige kebabspiesen, Kabuli Palaw, Karahi en Döner – de smaken van Kaboel rechtstreeks van de grill op je bord.",
     cta: "Bekijk de menukaart",
+    directions: "Route bekijken",
   },
   eat: {
     badge: "Keuken · Houtskoolgrill",
@@ -684,6 +692,7 @@ const fr: TranslationSchema = {
     support:
       "Préparé frais et avec cœur : brochettes de kebab épicées, Kabuli Palaw, Karahi et Döner – les saveurs de Kaboul, du gril directement dans votre assiette.",
     cta: "Voir la carte",
+    directions: "Voir l'itinéraire",
   },
   eat: {
     badge: "Cuisine · Gril au charbon",
@@ -760,6 +769,7 @@ const it: TranslationSchema = {
     support:
       "Preparato fresco e con cuore: spiedini di kebab speziati, Kabuli Palaw, Karahi e Döner – i sapori di Kabul dalla griglia direttamente nel tuo piatto.",
     cta: "Vedi il menù",
+    directions: "Mostra indicazioni",
   },
   eat: {
     badge: "Cucina · Griglia a carbone",
@@ -836,6 +846,7 @@ const es: TranslationSchema = {
     support:
       "Preparado fresco y con cariño: brochetas de kebab especiadas, Kabuli Palaw, Karahi y Döner – los sabores de Kabul de la parrilla directamente a tu plato.",
     cta: "Ver la carta",
+    directions: "Ver cómo llegar",
   },
   eat: {
     badge: "Cocina · Parrilla de carbón",
@@ -912,6 +923,7 @@ const el: TranslationSchema = {
     support:
       "Φτιαγμένο φρέσκο και με μεράκι: πικάντικα σουβλάκια κεμπάπ, Kabuli Palaw, Karahi και Döner – οι γεύσεις της Καμπούλ από τη σχάρα κατευθείαν στο πιάτο σας.",
     cta: "Δείτε το μενού",
+    directions: "Οδηγίες διαδρομής",
   },
   eat: {
     badge: "Κουζίνα · Σχάρα κάρβουνου",

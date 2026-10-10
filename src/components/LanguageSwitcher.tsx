@@ -16,8 +16,8 @@ const LanguageSwitcher = () => {
       <DropdownMenuTrigger asChild>
         <button
           type="button"
-          aria-label={t.nav.language}
-          className="inline-flex h-10 items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 text-sm font-semibold text-white/90 transition duration-300 hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+          aria-label={`${t.nav.language} ${meta.label}`}
+          className="inline-flex h-11 items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 text-sm font-semibold text-white/90 transition duration-300 hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
         >
           <Globe className="h-4 w-4" />
           <span className="hidden sm:inline">{meta.label}</span>

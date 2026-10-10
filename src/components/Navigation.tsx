@@ -29,7 +29,7 @@ const Navigation = () => {
           <button
             onClick={() => scrollToSection("#welcome")}
             className="group flex items-center gap-3 text-left"
-            aria-label={t.nav.homeAria}
+            aria-label={`Kabul Street Kitchen ${t.nav.logoSubtitle}`}
           >
             <img
               src={kabulLogo}
@@ -64,7 +64,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="text-white hover:bg-white/10 md:hidden"
+              className="h-11 w-11 text-white hover:bg-white/10 md:hidden"
               onClick={() => setIsOpen((value) => !value)}
               aria-label={t.nav.toggleAria}
             >

@@ -15,7 +15,7 @@ import {
 } from "@/data/restaurantData";
 
 // Stable query keys for every piece of restaurant content.
-export const restaurantKeys = {
+const restaurantKeys = {
   menu: ["menu-categories"] as const,
   drinks: ["drink-categories"] as const,
   contact: ["contact-info"] as const,
@@ -30,18 +30,14 @@ const liveQueryOptions = {
   retry: 2,
 } as const;
 
-export interface RestaurantQueryState<T> {
+interface RestaurantQueryState<T> {
   data: T;
   errorMessage: string | null;
-  isFallback: boolean;
-  isFetching: boolean;
 }
 
 interface RestaurantQueryObserver<T> {
   data: T | undefined;
   error: Error | null;
-  isPlaceholderData: boolean;
-  isFetching: boolean;
 }
 
 const missingConfigurationMessage =
@@ -73,8 +69,6 @@ function useRestaurantQueryState<T>(
   return {
     data: query.data ?? fallback,
     errorMessage,
-    isFallback: !supabase || !query.data || query.isPlaceholderData,
-    isFetching: query.isFetching,
   };
 }
 
